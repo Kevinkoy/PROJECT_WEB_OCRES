@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Navbar extends React.Component {
+class Widget1 extends React.Component {
     /// no Constructor
 
 
@@ -8,7 +8,7 @@ class Navbar extends React.Component {
     render() {
         return (
             <div>
-                <h1 style={{color:'white'}}> Here NavBar </h1>
+                <h1 style={{color:'white'}}> Widget1 </h1>
                 <input></input>
                 <button>OK</button>
             </div>
@@ -17,4 +17,4 @@ class Navbar extends React.Component {
 
 }
 
-export default Navbar;
+export default Widget1;
