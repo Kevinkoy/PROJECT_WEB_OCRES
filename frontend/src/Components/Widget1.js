@@ -1,4 +1,5 @@
 import React from 'react';
+import Calendar from 'react-calendar';
 
 class Widget1 extends React.Component {
     /// no Constructor
@@ -8,9 +9,10 @@ class Widget1 extends React.Component {
     render() {
         return (
             <div>
-                <h1 style={{color:'white'}}> Widget1 </h1>
-                <input></input>
-                <button>OK</button>
+                <h1 style={{ color: 'white' }}> My Calendar </h1>
+                <Calendar
+
+                />
             </div>
         );
     }

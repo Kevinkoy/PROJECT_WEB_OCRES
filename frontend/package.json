@@ -5,6 +5,7 @@
   "dependencies": {
     "chart.js": "^2.9.4",
     "react": "^16.11.0",
+    "react-calendar": "^3.2.1",
     "react-chartjs-2": "^2.11.1",
     "react-dom": "^16.11.0",
     "react-grid-system": "^7.1.1",
