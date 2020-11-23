@@ -1,6 +1,6 @@
 import React from 'react';
 import Iframe from 'react-iframe';
-import Widget3 from './Widget3';
+
 
 class Widget4 extends React.Component{
 
