@@ -1,5 +1,6 @@
 import React from 'react';
 import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
 
 class Widget1 extends React.Component {
     /// no Constructor
