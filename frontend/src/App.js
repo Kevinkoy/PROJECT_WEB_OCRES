@@ -9,6 +9,10 @@ import Widget2 from './Components/Widget2'
 import { Container, Row, Col, setConfiguration } from 'react-grid-system';
 import Widget3 from './Components/Widget3';
 import Widget4 from './Components/Widget4';
+<<<<<<< Updated upstream
+=======
+import Widget7 from './Components/Widget7';
+>>>>>>> Stashed changes
 
 class App extends React.Component {
  
@@ -33,7 +37,11 @@ class App extends React.Component {
               <Widget4/>
             </Col>
             <Col sm={6}>
+<<<<<<< Updated upstream
               <Widget4/>
+=======
+              <Widget7/>
+>>>>>>> Stashed changes
             </Col>
           </Row>
         </Container>

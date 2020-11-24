@@ -1,0 +1,56 @@
+
+
+.horloge {
+    border-radius: 50%;
+    background: #fff url(https://cssanimation.rocks/images/posts/clocks/ios_clock.svg) no-repeat center;
+    background-size: 85%;
+    height: 7em;
+    width: 7em;
+  }
+
+ 
+
+  .heures-container, .minute-container, .secondes-container{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .heures{
+    background: #000;
+    height: 10%;
+    left: 12%;
+    position: absolute;
+    top: 20%;
+    transform-origin: 50% 100%;
+    width: 1%;
+  }
+
+  .minutes{
+    background: #000;
+    height: 15%;
+    left: 12.5%;
+    position: absolute;
+    top: 15%;
+    transform-origin: 50% 100%;
+    width: 0.7%;
+}
+
+.secondes{
+    background: #000;
+    height: 25%;
+    left: 12.5%;
+    position: absolute;
+    top: 8%;
+    transform-origin: 50% 80%;
+    width: 0.3%;
+   
+}
+@keyframes rotate{
+  100%{
+    transform: rotateZ(360deg);
+  }
+}
+
