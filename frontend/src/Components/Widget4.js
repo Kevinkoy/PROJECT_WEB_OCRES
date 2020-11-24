@@ -1,9 +1,5 @@
 import React from 'react';
 import Iframe from 'react-iframe';
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 
 class Widget4 extends React.Component{
 
