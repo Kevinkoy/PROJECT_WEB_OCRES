@@ -17,6 +17,7 @@
     "react-scripts": "3.2.0",
     "react-stickies": "0.0.16",
     "react-youtube": "^7.13.0",
+    "storybook": "^6.1.5",
     "styled-components": "^5.2.1"
   },
   "scripts": {
