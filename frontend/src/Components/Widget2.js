@@ -18,14 +18,16 @@ class Widget2 extends React.Component {
                     'ioT',
                     'Bootcamp',
                 ],
+ 
                 
                 datasets: [
                     {
                         label: 'notes',
-                        pointBackgroundColor: 'rgba(179,181,198,1)',
-                        pointBorderColor: '#fff',
+                        pointBackgroundColor: 'rgba(255,255,255,1)',
+                        pointBorderColor: '##77cdd1',
                         borderColor: 'red',
-                        pointHoverBorderColor: 'rgba(179,181,198,1)',
+                        color: 'red',
+                        pointHoverBorderColor: 'rgba(255,255,255,1)',
                         data: [
                             14,
                             16,
@@ -67,4 +69,6 @@ class Widget2 extends React.Component {
     }
 
 }
+
+
 export default Widget2;
