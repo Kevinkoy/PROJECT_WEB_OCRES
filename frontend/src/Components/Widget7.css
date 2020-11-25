@@ -21,28 +21,17 @@
 
   .heures{
     background: #000;
-<<<<<<< Updated upstream
-    height: 10%;
-    left: 50%;
-    position: absolute;
-    top: 50%;
-=======
     height: 20%;
     left: 50%;
     position: absolute;
     top: 33%;
->>>>>>> Stashed changes
     transform-origin: 50% 100%;
     width: 3%;
   }
 
   .minutes{
     background: #000;
-<<<<<<< Updated upstream
-    height: 15%;
-=======
     height: 25%;
->>>>>>> Stashed changes
     left: 50%;
     position: absolute;
     top: 50%;
@@ -52,11 +41,7 @@
 
 .secondes{
     background: #000;
-<<<<<<< Updated upstream
-    height: 25%;
-=======
     height: 30%;
->>>>>>> Stashed changes
     left: 50%;
     position: absolute;
     top: 50%;
