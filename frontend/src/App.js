@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+<<<<<<< Updated upstream
 /// Grid = Gérer le display
 import { Container, Row, Col, setConfiguration } from 'react-grid-system';
 
@@ -10,6 +11,17 @@ import Widget2 from './Components/Widget2'
 import Widget3 from './Components/Widget3';
 import Widget4 from './Components/Widget4';
 import Widget5 from './Components/Widget5';
+=======
+
+import Navbar from './Components/Navbar';
+import Widget1 from './Components/Widget1';
+import Widget2 from './Components/Widget2'
+
+
+import { Container, Row, Col, setConfiguration } from 'react-grid-system';
+import Widget3 from './Components/Widget3';
+import Widget4 from './Components/Widget4';
+>>>>>>> Stashed changes
 import Widget7 from './Components/Widget7';
 
 class App extends React.Component {
@@ -33,10 +45,14 @@ class App extends React.Component {
             <Col sm={4}>
               <Widget4/>
             </Col>
+<<<<<<< Updated upstream
             <Col sm={4}>
               <Widget5/>
             </Col>
             <Col sm={4}>
+=======
+            <Col sm={6}>
+>>>>>>> Stashed changes
               <Widget7/>
             </Col>
           </Row>
