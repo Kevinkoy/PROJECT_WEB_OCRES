@@ -21,32 +21,32 @@
 
   .heures{
     background: #000;
-    height: 20%;
+    height: 10%;
     left: 50%;
     position: absolute;
-    top: 33%;
+    top: 50%;
     transform-origin: 50% 100%;
-    width: 3%;
+    width: 1%;
   }
 
   .minutes{
+    background: #000;
+    height: 15%;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform-origin: 50% 100%;
+    width: 0.7%;
+}
+
+.secondes{
     background: #000;
     height: 25%;
     left: 50%;
     position: absolute;
     top: 50%;
-    transform-origin: 50% 100%;
-    width: 2%;
-}
-
-.secondes{
-    background: #000;
-    height: 30%;
-    left: 50%;
-    position: absolute;
-    top: 50%;
     transform-origin: 50% 80%;
-    width: 1%;
+    width: 0.3%;
    
 }
 @keyframes rotate{

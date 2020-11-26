@@ -1,6 +1,6 @@
 import React from 'react';
-import { Radar } from 'react-chartjs-2';
-import './Widget2.css';
+import { Bar } from 'react-chartjs-2';
+
 
 class Widget2 extends React.Component {
 
@@ -9,7 +9,6 @@ class Widget2 extends React.Component {
         this.state = {
             chartData: {
                 
-               
                 labels:  [
                     
                     'Web',
@@ -17,52 +16,40 @@ class Widget2 extends React.Component {
                     'Reseau',
                     'ioT',
                     'Bootcamp',
-                ],
- 
-                
+                ], 
                 datasets: [
                     {
-                        label: 'notes',
-                        pointBackgroundColor: 'rgba(255,255,255,1)',
-                        pointBorderColor: '##77cdd1',
-                        borderColor: 'red',
-                        color: 'red',
-                        pointHoverBorderColor: 'rgba(255,255,255,1)',
+                        label: 'Notes',
                         data: [
-                            14,
+                            11,
                             16,
-                            13,
+                            14,
                             17,
                             19
+                        ],
+                        backgroundColor : [
+                            " ",
+                            "red",
+                            "black",
+                            "green",
+                            "yellow",
+                            
                         ]
+                    
                         
-                    },
-                    
-                   
-                    
+                    }
                 ]
-            },
-           
+            }          
         }
-        
-        
-        
     }
     
-
     render() {
-        
         return (
             <div className="chart">
                 
-                <Radar
-                    
+                <Bar
                     data={this.state.chartData}
-                    options ={{
-                        maintainAspectRatio: false,
-                    
-                    }}
-
+                    options ={{}}
                 />
             </div>
         );
