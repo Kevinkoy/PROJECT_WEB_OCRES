@@ -3,9 +3,7 @@
   background-color: black;
 }
 
-.App-logo {
-  height: 40vmin;
-}
+
 
 .App-header {
   background-color: #282c34;
@@ -20,4 +18,8 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+.container{
+  background-color: crimson;
 }

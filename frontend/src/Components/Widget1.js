@@ -10,10 +10,8 @@ class Widget1 extends React.Component {
     render() {
         return (
             <div>
-                <h1 style={{ color: 'white' }}> My Calendar </h1>
-                <Calendar
+                <Calendar/>
 
-                />
             </div>
         );
     }
