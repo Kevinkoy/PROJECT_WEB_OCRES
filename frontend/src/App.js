@@ -11,6 +11,7 @@ import Widget5 from './Components/Widget5';
 import Widget6 from './Components/Widget6';
 import Widget7 from './Components/Widget7';
 import Widget9 from './Components/Widget9';
+import Widget8 from './Components/Widget8';
 
 class App extends React.Component {
  
@@ -34,7 +35,7 @@ class App extends React.Component {
           </Row>
           <Row>
             <Col sm={4}>
-              <Widget4/>
+              <Widget8/>
             </Col>
             <Col sm={6}>
               <Widget7/>

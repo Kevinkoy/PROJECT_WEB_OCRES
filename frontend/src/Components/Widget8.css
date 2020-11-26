@@ -1,0 +1,20 @@
+.Widget8{
+    align-self: center;
+    display: grid;
+    position: absolute;
+ top:50%;
+ left: 50%;
+ transform: translateX(-50%) translateY(-50%);
+    width: 1000px;
+    height: 600px;
+    border: 2cm;
+    border-block-color: white;
+}
+
+.timer{
+    text-align: center;
+    background-color: aquamarine;
+    font-family: monospace;
+    font-size: 8em;
+    padding-top: 0.9em;
+}
