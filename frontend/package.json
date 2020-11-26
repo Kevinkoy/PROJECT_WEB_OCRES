@@ -18,6 +18,7 @@
     "react-light-notifications": "^1.0.6",
     "react-moveable": "^0.24.1",
     "react-native": "^0.63.3",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.2.0",
     "react-stickies": "0.0.16",
     "react-svg-radar-chart": "^1.2.0",

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Bar } from 'react-chartjs-2';
 
@@ -59,3 +60,5 @@ class Widget2 extends React.Component {
 
 
 export default Widget2;
+=======
+>>>>>>> master
