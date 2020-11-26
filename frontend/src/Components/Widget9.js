@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+/*import React, { Component } from 'react';
 import Chart from 'react-apexcharts';
 
 class Widget9 extends Component {
@@ -23,4 +23,4 @@ class Widget9 extends Component {
     }
   }
   
-  export default Widget9;
+  export default Widget9;*/

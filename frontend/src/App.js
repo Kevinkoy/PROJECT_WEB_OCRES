@@ -14,6 +14,7 @@ import Widget9 from './Components/Widget9';
 
 
 
+
 class App extends React.Component {
  
   render() {
@@ -22,45 +23,18 @@ class App extends React.Component {
 
       <div>
         {/* Commentaire */}
-<<<<<<< HEAD
-        <Container fluid >
+        <Container fluid style={{overflow:'hidden'}} >
             <Row justify="around" debug>
               <Col xs={6} debug style={{marginTop:'200px', marginLeft:"30px", backgroundColor:"rgba(255, 122, 193, 0.19)"}}> <Widget2/> </Col>
-              <Col xs={3} debug style={{marginTop:'200px', backgroundColor: "rgba(0,0,0,0)"}}> <Widget1/> </Col>  
+              <Col xs={3}  style={{marginTop:'200px', backgroundColor: "rgba(0,0,0,0)"}}> <Widget1/> </Col>  
             </Row> 
             <br />
             <br />
-            <Row justify="around" debug>
-              <Col xs={2} debug style={{marginLeft:"30px", backgroundColor:"rgba(0,0,0,0)"}}> <Widget5/> </Col>
-              <Col xs={2} debug style={{marginLeft:"30px", background:"rgba(0,0,0,0)"}}> <Widget3/> </Col>
-              <Col xs={2} debug style={{marginLeft:"30px", backgroundColor:"rgba(0,0,0,0)", marginTop:"20px"}}> <Widget4/> </Col>
+            <Row justify="around" >
+              <Col xs={3}  style={{marginLeft:"30px", backgroundColor:"rgba(0,0,0,0)"}}> <Widget5/> </Col>
+              <Col xs={2}  style={{marginLeft:"30px", background:"rgba(0,0,0,0)"}}> <Widget3/> </Col>
+              <Col xs={2}  style={{marginLeft:"30px", backgroundColor:"rgba(0,0,0,0)", marginTop:"20px"}}> <Widget4/> </Col>
             </Row>
-=======
-        <Container>
-          <Row>
-            <Col sm={6}>
-              <Widget1 />
-            </Col>
-            <Col sm={6}>
-              <Widget2/>
-            </Col>
-            <Col sm={6}>
-              <Widget3/>
-            </Col>
-          </Row>
-          <Row>
-            <Col sm={4}>
-              <Widget4/>
-            </Col>
-            <Col sm={6}>
-              <Widget7/>
-            </Col>
-            <Col sm={6}>
-              <Widget9/>
-
-            </Col>
-          </Row>
->>>>>>> master
         </Container>
 
       </div>

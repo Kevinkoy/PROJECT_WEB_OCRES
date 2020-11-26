@@ -16,24 +16,10 @@ class Widget2 extends React.Component {
                     'Reseau',
                     'ioT',
                     'Bootcamp',
-<<<<<<< HEAD
                 ], 
                 datasets: [
                     {
                         label: 'Notes',
-=======
-                ],
- 
-                
-                datasets: [
-                    {
-                        label: 'notes',
-                        pointBackgroundColor: 'rgba(255,255,255,1)',
-                        pointBorderColor: '##77cdd1',
-                        borderColor: 'red',
-                        color: 'red',
-                        pointHoverBorderColor: 'rgba(255,255,255,1)',
->>>>>>> master
                         data: [
                             11,
                             16,
