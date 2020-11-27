@@ -1,12 +1,13 @@
 import React from 'react';
-/// Grid = Gérer le display
-//import { Container, Row, Col, setConfiguration } from 'react-grid-system';
+import Header from './Components/Header';
 
 class Admin extends React.Component {
  
   render() {
-
+   
     return (
+      <div>
+      <Header></Header>
       <div> 
         <div className="form-group">
         <div className="row text-center">
@@ -18,6 +19,7 @@ class Admin extends React.Component {
           <div className="form-group"><label>Spending</label><input type="number" className="form-control" min={0} step="0.01" placeholder="0.00€" /></div>
           <div className="form-group" style={{textAlign: 'center'}}><button className="btn btn-success btn-block" type="submit" style={{textAlign: 'center'}}>Submit</button></div>
         </form>
+      </div>
       </div>
       </div>
 

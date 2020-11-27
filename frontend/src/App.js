@@ -4,7 +4,7 @@ import './App.css';
 import { Container, Row, Col, setConfiguration } from 'react-grid-system';
 
 /// Components
-import Navbar from './Components/Navbar';
+import Header from './Components/Header';
 import Widget1 from './Components/Widget1';
 import Widget2 from './Components/Widget2'
 import Widget3 from './Components/Widget3';
@@ -30,7 +30,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Navbar></Navbar>
+        <Header> </Header>
         {/* Commentaire */}
         <Container fluid style={{overflow:'hidden'}} >
             <Row justify="around" debug>
