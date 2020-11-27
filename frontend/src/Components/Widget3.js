@@ -8,7 +8,6 @@ class Widget3 extends React.Component{
 
         return(
            <div> 
-            <h1 style={{ color: 'white' }}> Speedometer </h1>
             <ReactSpeedmoeter
             allowTransparency="true"
             maxValues={1000}
@@ -22,7 +21,6 @@ class Widget3 extends React.Component{
                 "#a3be8c",
                 "#b48ead",
             ]}
-            
             />
            </div>
         );

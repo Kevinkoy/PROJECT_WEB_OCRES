@@ -1,4 +1,4 @@
-/*import React, { Component } from 'react';
+import React, { Component } from 'react';
 import Chart from 'react-apexcharts';
 
 class Widget9 extends Component {
@@ -16,6 +16,7 @@ class Widget9 extends Component {
   render() {
     return (
         <div className="donut">
+          
           <Chart options={this.state.options} series={this.state.series} type="donut"
           color='white' width="380" />
         </div>
@@ -23,4 +24,4 @@ class Widget9 extends Component {
     }
   }
   
-  export default Widget9;*/
+  export default Widget9;
