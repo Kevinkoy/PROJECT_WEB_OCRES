@@ -45,9 +45,8 @@ class App extends React.Component {
               <Col xs={2}  style={{marginLeft:"20px", backgroundColor:"rgba(0,0,0,0)"}}> <Widget9/> </Col>
               <Col xs={2}  style={{marginLeft:"30px", backgroundColor:"rgba(0,0,0,0)", marginTop:"20px"}}> <Widget4/> </Col>
             </Row>
-            <Row justify="around">
-              <Col> <Widget8/> </Col>
-
+            <Row>
+              <Col md={4} > <Widget8/></Col>
             </Row>
 
         </Container>

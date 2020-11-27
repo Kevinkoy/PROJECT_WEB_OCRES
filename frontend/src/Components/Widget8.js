@@ -1,25 +1,34 @@
 import React, { Component } from 'react';
 import './Widget8.css';
 
-class Widget8 extends Component{
-    constructor(props){
+class Widget8 extends Component {
+    constructor(props) {
         super(props);
-        this.state = {date: new Date()};
+        this.state = { date: new Date() };
     }
-componentDidMount(){
+    componentDidMount() {
         this.timer = setInterval(
-            () => this.setState({date: new Date()}),
+            () => this.setState({ date: new Date() }),
             1000
         );
     }
-componentWillUnmount(){
+    componentWillUnmount() {
         clearInterval(this.timer);
     }
-render(){
-        return( 
-            <div class="clock">
-                <div class="timer">{this.state.date.toLocaleTimeString()}</div>
-            </div>
+    render() {
+        return (
+            <div class="clock"
+                style={{
+                    background:'#628cb3',
+                    borderRadius: '50%',
+                    width: '160px',
+                    height: '160px',
+                    textAlign:"center"
+                    
+                    
+                }}>
+                <div class="time" >{this.state.date.toLocaleTimeString()}</div>
+            </div >
         )
     }
 }
