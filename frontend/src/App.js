@@ -27,23 +27,24 @@ import { Link } from 'react-router-dom';
 class App extends React.Component {
 
   render() {
-
     return (
       <div>
+        <Navbar></Navbar>
         {/* Commentaire */}
         <Container fluid style={{overflow:'hidden'}} >
             <Row justify="around" debug>
               <Col xs={6} debug style={{marginTop:'200px', marginLeft:"30px", backgroundColor:"rgba(255, 122, 193, 0.19)"}}> <Widget2/> </Col>
               <Col xs={3}  style={{marginTop:'200px', backgroundColor: "rgba(0,0,0,0)"}}> <Widget1/> </Col>  
             </Row> 
-            <br />
-            <br />
+            <br/>
+            <br/>
             <Row justify="around" >
               <Col xs={3}  style={{marginLeft:"30px", backgroundColor:"rgba(0,0,0,0)"}}> <Widget5/> </Col>
               <Col xs={2}  style={{marginLeft:"30px", background:"rgba(0,0,0,0)"}}> <Widget3/> </Col>
               <Col xs={2}  style={{marginLeft:"30px", backgroundColor:"rgba(0,0,0,0)", marginTop:"20px"}}> <Widget4/> </Col>
             </Row>
         </Container>
+        
 
       </div>
     )

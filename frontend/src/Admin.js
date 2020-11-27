@@ -7,6 +7,7 @@ class Admin extends React.Component {
   render() {
 
     return (
+      <div> 
         <div className="form-group">
         <div className="row text-center">
           <div className="col"><label className="col-form-label text-center">Admin Form</label></div>
@@ -17,6 +18,7 @@ class Admin extends React.Component {
           <div className="form-group"><label>Spending</label><input type="number" className="form-control" min={0} step="0.01" placeholder="0.00€" /></div>
           <div className="form-group" style={{textAlign: 'center'}}><button className="btn btn-success btn-block" type="submit" style={{textAlign: 'center'}}>Submit</button></div>
         </form>
+      </div>
       </div>
 
     )
