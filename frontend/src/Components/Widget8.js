@@ -23,7 +23,9 @@ class Widget8 extends Component {
                     borderRadius: '50%',
                     width: '160px',
                     height: '160px',
-                    textAlign:"center"
+                    textAlign:'center',
+                    marginLeft:'120px',
+                    marginTop:'30px'
                     
                     
                 }}>

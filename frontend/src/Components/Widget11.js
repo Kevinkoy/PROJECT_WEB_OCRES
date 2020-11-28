@@ -1,7 +1,7 @@
 import React from "react";
 import { Row } from "react-grid-system";
 import {NotificationContainer,NotificationManager} from "react-light-notifications";
-import "react-light-notifications/lib/main.css";
+import "./Widget11_main.css/main.css";
   
 class Widget11 extends React.Component{
 
@@ -75,7 +75,7 @@ class Widget11 extends React.Component{
           Devoir
         </button>
         </Row>
-        <NotificationContainer />
+        <NotificationContainer/>
       </div>
       );
     }
