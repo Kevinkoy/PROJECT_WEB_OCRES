@@ -1,5 +1,5 @@
 import React from "react";
-import { Row } from "react-grid-system";
+import { Row, Container } from "react-grid-system";
 import {NotificationContainer,NotificationManager} from "react-light-notifications";
 import "./Widget11_main.css/main.css";
   
@@ -8,10 +8,13 @@ class Widget11 extends React.Component{
   render(){
 
       return(
-        <div>
+        <div >
+
+        
           <Row>
+            
         <button
-          style={{marginLeft:"10px", color:'#fff', textTransform:"uppercase", textDecoration:'none', backgroundColor:'rgb(128,128,128)', borderRadius:'5px', display:'inline-block', border:'none', transition: "all 0.4 ease 0s", padding:'32px 26px'}}
+          style={{marginLeft:"10px", color:'#fff', textTransform:"uppercase", textDecoration:'none', backgroundColor:'rgb(128,128,128)', borderRadius:'5px', display:'inline-block', border:'none', transition: "all 0.4 ease 0s", padding:'32px 26px', position:"relative"}}
           onClick={() => {
             NotificationManager.info({
               title: 'Info',
@@ -26,7 +29,7 @@ class Widget11 extends React.Component{
           Info
         </button>
         <button
-        style={{marginLeft:"40px", color:'#fff', textTransform:"uppercase", textDecoration:'none', backgroundColor:'rgb(128,128,128)', borderRadius:'5px', display:'inline-block', border:'none', transition: "all 0.4 ease 0s", padding:'32px 16px'}}
+        style={{marginLeft:"40px", color:'#fff', textTransform:"uppercase", textDecoration:'none', backgroundColor:'rgb(128,128,128)', borderRadius:'5px', display:'inline-block', border:'none', transition: "all 0.4 ease 0s", padding:'32px 16px', position:"relative"}}
         onClick={() => {
           NotificationManager.success({
             title: 'Recette',
@@ -44,7 +47,7 @@ class Widget11 extends React.Component{
         <br/>
         <Row>
         <button
-        style={{marginLeft:"10px", color:'#fff', textTransform:"uppercase", textDecoration:'none', backgroundColor:'rgb(128,128,128)', borderRadius:'5px', display:'inline-block', border:'none', transition: "all 0.4 ease 0s", padding:'32px 15px'}}
+        style={{marginLeft:"10px", color:'#fff', textTransform:"uppercase", textDecoration:'none', backgroundColor:'rgb(128,128,128)', borderRadius:'5px', display:'inline-block', border:'none', transition: "all 0.4 ease 0s", padding:'32px 15px', position:'relative'}}
         onClick={() => {
           NotificationManager.error({
             title: 'Phrase inspiration',
@@ -60,7 +63,7 @@ class Widget11 extends React.Component{
         </button>
         
         <button
-        style={{marginLeft:"39px", color:'#fff', textTransform:"uppercase", textDecoration:'none', backgroundColor:'rgb(128,128,128)', borderRadius:'5px', display:'inline-block', border:'none', transition: "all 0.4 ease 0s", padding:'32px 22px'}}
+        style={{marginLeft:"39px", color:'#fff', textTransform:"uppercase", textDecoration:'none', backgroundColor:'rgb(128,128,128)', borderRadius:'5px', display:'inline-block', border:'none', transition: "all 0.4 ease 0s", padding:'32px 22px', position:"relative"}}
         onClick={() => {
           NotificationManager.warning({
             title: 'Devoir',
@@ -75,7 +78,9 @@ class Widget11 extends React.Component{
           Devoir
         </button>
         </Row>
+        
         <NotificationContainer/>
+        
       </div>
       );
     }
