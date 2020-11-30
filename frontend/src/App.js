@@ -53,13 +53,13 @@ class App extends React.Component {
 
                 <div className="col-sm-6 col-lg-8">
                   <div className="card clean-card text-center">
-                    <Widget2 />
+                    <Widget2 /> {/* GRAPH1 */}
                   </div>
                 </div>
 
                 <div className="col-sm-6 col-lg-4">
-                  <div className="card clean-card text-center">
-                    <Widget1 />
+                  <div className="card clean-card text-center" style={{background:"transparent", border:"transparent"}}>
+                    <Widget1 /> {/* CALENDAR */}
                   </div>
                 </div>
 
@@ -70,17 +70,25 @@ class App extends React.Component {
 
               {/* SECOND ROW */}
               <div className="row justify-content-center">
-                <div className="col-sm-6 col-lg-8">
+
+                <div className="col-sm-6 col-lg-6">
                   <div className="card clean-card text-center">
-                    <Widget9 />
+                    <Widget9 /> {/* GRAPH2 */}
                   </div>
                 </div>
 
-                <div className="col-sm-6 col-lg-4">
-                  <div className="card clean-card text-center">
-                    <Widget8 />
+                <div className="col-sm-6 col-lg-3">
+                  <div className="card clean-card text-center" >
+                    <Widget11/> {/* NOTIFICATIONS */}
                   </div>
                 </div>
+
+                <div className="col-sm-6 col-lg-3">
+                  <div className="card clean-card text-center">
+                    <Widget8 /> {/* CLOCK */}
+                  </div>
+                </div>
+
               </div>
               {/* SECOND ROW */}
 
@@ -88,23 +96,29 @@ class App extends React.Component {
 
               {/* THIRD ROW */}
               <div className="row justify-content-center">
+
+
+
+                <div className="col-sm-6 col-lg-3">
+                  <div className="card clean-card center" style={{background:"transparent", border:"transparent"}}>
+                    <Widget4 /> {/* DEEZER */}
+                  </div>
+                </div>
+
+
+
                 <div className="col-sm-6 col-lg-4">
-                  <div className="card clean-card center">
-                    <Widget4 />
+                  <div className="card clean-card text-center">
+                    <Widget6 /> {/* WEATHER */}
                   </div>
                 </div>
 
                 <div className="col-sm-6 col-lg-4">
-                  <div className="card clean-card text-center">
-                    <Widget6 />
+                  <div className="card clean-card text-center" style={{background:"transparent", border:"transparent"}}>
+                    <Widget5 /> {/* POST-IT */}
                   </div>
                 </div>
 
-                <div className="col-sm-6 col-lg-4">
-                  <div className="card clean-card text-center">
-                    <Widget5 />
-                  </div>
-                </div>
               </div>
               {/* THIRD ROW */}
 
