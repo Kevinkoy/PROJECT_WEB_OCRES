@@ -7,18 +7,17 @@ class Widget6 extends React.Component{
     render(){
         return(  
           <div>
-          
-         
-          
           {/* bootstrap */}
           <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossOrigin="anonymous" />
-         
-         
+          
+          <br></br>
           <div className="container">
+
           <div className="input-group-append">
           <input id="city-input" style={{width:500}}  type="text" className="form-control" placeholder="Enter your city Weather"/>
                 <button id="city-input-button" style={{width:100}} className="btn btn-success" type="submit" onClick={nouvelle_ville}>Actualise</button>
               </div>
+              <br></br>
             <div className="card-deck mb-3 text-center">
               <div className="card mb-4 shadow-sm offset-sm-1">
                 <div className="card-header">
