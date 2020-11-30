@@ -1,13 +1,12 @@
 import React from 'react';
 import './App.css';
 /// Grid = Gérer le display
-import { Container, Row, Col, Hidden, Visible } from 'react-grid-system';
+import { Container, Row, Col } from 'react-grid-system';
 
 /// Components
 import Header from './Components/Header';
 import Widget1 from './Components/Widget1';
 import Widget2 from './Components/Widget2';
-import Widget3 from './Components/Widget3';
 import Widget4 from './Components/Widget4';
 import Widget5 from './Components/Widget5';
 //import Widget6 from './Components/Widget6';
@@ -15,10 +14,11 @@ import Widget5 from './Components/Widget5';
 import Widget8 from './Components/Widget8';
 import Widget9 from './Components/Widget9';
 import Widget11 from './Components/Widget11';
+import Widget6 from './Components/Widget6';
 
 
 /// Routes
-import { Link } from 'react-router-dom';
+
 
 
 
@@ -46,6 +46,8 @@ class App extends React.Component {
             </Row>
             <Row>
               <Col lg={4} md={12} xs={12} > <Widget8/></Col>
+              <Col lg={4} md={12} xs={12} > <Widget6/> </Col>
+              
         
             </Row>
 
