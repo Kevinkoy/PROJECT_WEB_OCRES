@@ -11,21 +11,21 @@ class Widget2 extends React.Component {
 
                 labels: [
 
-                    'Lundi',
-                    'Mardi',
-                    'Mercredi',
-                    'Jeudi',
-                    'Vendredi',
-                    'Samedi',
-                    'Dimanche'
+                    'Monday',
+                    'Tuesday',
+                    'Wednesday',
+                    'Thursday',
+                    'Friday',
+                    'Saturday',
+                    'Sunday'
                 ],
                 datasets: [
                     {
-                        label: 'Depenses',
+                        label: 'Total Spending',
                         fill: false,
                         lineTension: 0.1,
                         backgroundColor: 'rgba(75,192,192,0.4)',
-                        borderColor: 'rgb(0,255,0)',
+                        borderColor: '#0078FF',
                         borderCapStyle: 'butt',
                         borderDash: [],
                         borderDashOffset: 0.0,

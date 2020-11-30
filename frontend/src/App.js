@@ -51,13 +51,13 @@ class App extends React.Component {
               {/* FIRST ROW 1 */}
               <div className="row justify-content-center">
 
-                <div className="col-sm-6 col-lg-8">
+                <div className="col-sm-6 col-md-8 col-lg-8">
                   <div className="card clean-card text-center">
                     <Widget2 /> {/* GRAPH1 */}
                   </div>
                 </div>
 
-                <div className="col-sm-6 col-lg-4">
+                <div className="col-sm-6 col-md-8 col-lg-4">
                   <div className="card clean-card text-center" style={{background:"transparent", border:"transparent"}}>
                     <Widget1 /> {/* CALENDAR */}
                   </div>
@@ -71,20 +71,22 @@ class App extends React.Component {
               {/* SECOND ROW */}
               <div className="row justify-content-center">
 
-                <div className="col-sm-6 col-lg-6">
-                  <div className="card clean-card text-center">
+                <div className="col-sm-6 col-md-8 col-lg-6">
+                  <div className="card clean-card text-center"
+                  style={{background:"radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%)"}}
+                  >
                     <Widget9 /> {/* GRAPH2 */}
                   </div>
                 </div>
 
-                <div className="col-sm-6 col-lg-3">
-                  <div className="card clean-card text-center" >
+                <div className="col-sm-6 col-md-8 col-lg-3">
+                  <div className="card clean-card text-center"  style={{marginTop:"25px", background:"transparent", border:"transparent"}}>
                     <Widget11/> {/* NOTIFICATIONS */}
                   </div>
                 </div>
 
-                <div className="col-sm-6 col-lg-3">
-                  <div className="card clean-card text-center">
+                <div className="col-sm-6 col-md-8 col-lg-3">
+                  <div className="card clean-card text-center" style={{background:"transparent", border:"transparent"}}>
                     <Widget8 /> {/* CLOCK */}
                   </div>
                 </div>
@@ -99,7 +101,7 @@ class App extends React.Component {
 
 
 
-                <div className="col-sm-6 col-lg-3">
+                <div className="col-sm-6 col-md-8 col-lg-3">
                   <div className="card clean-card center" style={{background:"transparent", border:"transparent"}}>
                     <Widget4 /> {/* DEEZER */}
                   </div>
@@ -107,13 +109,13 @@ class App extends React.Component {
 
 
 
-                <div className="col-sm-6 col-lg-4">
-                  <div className="card clean-card text-center">
+                <div className="col-sm-6 col-md-8 col-lg-4">
+                  <div className="card clean-card text-center" style={{background:"linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%)"}}>
                     <Widget6 /> {/* WEATHER */}
                   </div>
                 </div>
-
-                <div className="col-sm-6 col-lg-4">
+ 
+                <div className="col-sm-6 col-md-8 col-lg-4">
                   <div className="card clean-card text-center" style={{background:"transparent", border:"transparent"}}>
                     <Widget5 /> {/* POST-IT */}
                   </div>

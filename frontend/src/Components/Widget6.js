@@ -14,8 +14,8 @@ class Widget6 extends React.Component{
           <div className="container">
 
           <div className="input-group-append">
-          <input id="city-input" style={{width:500}}  type="text" className="form-control" placeholder="Enter your city Weather"/>
-                <button id="city-input-button" style={{width:100}} className="btn btn-success" type="submit" onClick={nouvelle_ville}>Actualise</button>
+          <input id="city-input" style={{width:500}}  type="text" className="form-control" placeholder="What's the weather?"/>
+                <button id="city-input-button" style={{width:100}} className="btn btn-success" type="submit" onClick={nouvelle_ville}> Refresh </button>
               </div>
               <br></br>
             <div className="card-deck mb-3 text-center">

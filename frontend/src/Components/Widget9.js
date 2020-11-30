@@ -9,7 +9,7 @@ class Widget9 extends Component {
     this.state = {
       options: {},
       series: [44, 55, 41, 17, 15],
-      labels: ['A', 'B', 'C', 'D', 'E']
+      labels: ['A', 'B', 'C', 'D', 'E'],
     }
   }
 
@@ -18,7 +18,7 @@ class Widget9 extends Component {
         <div className="donut">
           
           <Chart options={this.state.options} series={this.state.series} type="donut"
-          color='white' width="380" />
+          color='white' width="380"/>
         </div>
       );
     }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Widget8.css';
+//import './Widget8.css';
 
 class Widget8 extends Component {
     constructor(props) {
@@ -19,15 +19,13 @@ class Widget8 extends Component {
         return (
             <div class="clock"
                 style={{
-                    background:'#628cb3',
-                    borderRadius: '50%',
-                    width: '160px',
-                    height: '160px',
-                    textAlign:'center',
-                    marginLeft:'120px',
-                    marginTop:'30px'
-                    
-                    
+                    background: 'linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%)',
+                    color: 'white',
+                    fontSize: '60px',
+                    width: '250px',
+                    height: '250px',
+                    paddingTop: '75px', 
+                    textAlign: 'center',
                 }}>
                 <div class="time" >{this.state.date.toLocaleTimeString()}</div>
             </div >
