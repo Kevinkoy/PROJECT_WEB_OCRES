@@ -36,10 +36,10 @@ PS : It is easy to do API Extern, especially with all the resources on Github, s
 1/ Pull the project from the Github Repository below, 
 2/ Drop on Visual Studio Code
 3/ Open Terminal
-4/ Go to frontend file: 'cd frontend'
-5/ Install node_modules with : 'npm install'
-6/ Run the project : 'npm start'
-7/ If any library missing, check at the terminal : "module not found", just 'npm install [name_of_module_not_found]' precised on the terminal.
+4/ Go to frontend file: `cd frontend`
+5/ Install node_modules with : `npm install`
+6/ Run the project : `npm start`
+7/ If any library missing, check at the terminal : module not found, just `npm install [name_of_module_not_found]` precised on the terminal.
 
 *****************************************************************************************************************
 
