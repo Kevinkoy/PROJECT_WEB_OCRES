@@ -45,10 +45,10 @@ class App extends React.Component {
         <main className="page landing-page">
           <section className="clean-block about-us">
 
-            {/* CONTAINER*/}
+            {/* CONTAINER LE RESPONSIVE SE GERE DANS LES DIV AVEC col-xs | col-md | col-xl */}
             <div className="container">
 
-              {/* FIRST ROW 1 */}
+              {/* FIRST ROW 1 */} 
               <div className="row justify-content-center">
 
                 <div className="col-sm-6 col-md-8 col-lg-8">
