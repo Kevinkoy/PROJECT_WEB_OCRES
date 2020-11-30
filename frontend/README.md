@@ -19,6 +19,7 @@ Inspirez-vous des grands repos open sources qui existent sur github. Les informa
 - MALAN Jasmine
 
 ## Description: 
+- Project by ECE Students
 - App: Dashboard 
 - Theme: Student Dashboard
 - JSX / React / Bootstrap / CSS (+API)
@@ -27,9 +28,8 @@ Inspirez-vous des grands repos open sources qui existent sur github. Les informa
 API Extern: Deezer, Weather
 API Intern: "LocalTime Clock", Notifications, Calendar, Graph, Sticky Notes
 
-PS : It is easy to do API Extern, especially with all the resources on Github, so we wanted to make it ourselves.
-
- !!!! We choosed to not use any template, or start from Bootstrap template... !!! 
+PS : It is easy to create some widgets with API Extern, especially with all the resources on Github, so we wanted to make it ourselves.
+We choosed to not use any template, or start from Bootstrap template!!! 
 *****************************************************************************************************************
 
 ## DOCUMENTATION: STEPS How to make it running?
