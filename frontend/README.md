@@ -34,7 +34,9 @@ We choosed to not use any template, or start from Bootstrap template!!!
 4) Go to frontend file: `cd frontend`
 5) Install node_modules with : `npm install`
 6) Run the project : `npm start`
+7) Some module will be not found especially axios, just : `npm install axios --save`
 7) If any library missing, check at the terminal : module not found, just `npm install [name_of_module_not_found]` precised on the terminal.
+
 
 *****************************************************************************************************************
 
