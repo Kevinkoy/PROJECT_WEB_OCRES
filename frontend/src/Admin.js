@@ -36,7 +36,8 @@ class Admin extends React.Component {
                 {/* ROW 1 */}
                 <div className="row">
                   {/* FORM 1*/}
-                  <div className="col">
+                 
+                  <div className="col-sm-6 col-md-6 col-lg-4">
                     <form>
                       <div className="form-group">
                         <h1>Spending</h1>
@@ -46,7 +47,7 @@ class Admin extends React.Component {
                       <div className="form-group"><label htmlFor="email">Spending</label><input className="form-control" type="number" placeholder={0} min={0} step="0.01" required name="Spending" /></div><button className="btn btn-success btn-block" type="submit">Validate</button></form>
                   </div>
                   {/* FORM 2*/}
-                  <div className="col">
+                  <div className="col-sm-6 col-md-6 col-lg-4">
                     <form>
                       <div className="form-group">
                         <h1>Notifications</h1>
@@ -56,7 +57,7 @@ class Admin extends React.Component {
                   </div>
 
                   {/* FORM 3 */}
-                  <div className="col">
+                  <div className="col-sm-6 col-md-6 col-lg-4">
                     <form>
                       <div className="form-group">
                         <h1>Sticky Notes</h1>
@@ -75,7 +76,7 @@ class Admin extends React.Component {
           {/* FOOTER */}
           <Footer></Footer>
           {/* FOOTER */}
-          
+
       </div>
 
 

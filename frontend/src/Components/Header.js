@@ -22,7 +22,8 @@ class Header extends React.Component {
 
         {/* NAVBAR */}
         <nav className="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar" style={{background:"radial-gradient(circle, rgba(184,180,182,1) 0%, rgba(255,255,255,1) 48%, rgba(195,191,193,1) 100%)"}}>
-          <div className="container"><a className="navbar-brand logo" href="/">MyDashBoard</a><button data-toggle="collapse" className="navbar-toggler" data-target="#navcol-1"><span className="sr-only">Toggle navigation</span><span className="navbar-toggler-icon" /></button>
+          <div className="container"><a className="navbar-brand logo" href="/">MyDashBoard</a>
+          <button data-toggle="collapse" className="navbar-toggler" data-target="#navcol-1"><span className="sr-only">Toggle navigation</span><span className="navbar-toggler-icon" /></button>
             <div className="collapse navbar-collapse" id="navcol-1">
               <ul className="nav navbar-nav ml-auto">
                 <li className="nav-item"><a className="nav-link" href="Admin">Admin</a></li>
