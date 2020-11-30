@@ -22,8 +22,10 @@ Storybook est là pour vous aider à prototyper et documenter vos composants. Si
 API Extern: Deezer, Weather
 API Intern: "LocalTime Clock", Notifications, Calendar, Graph, Sticky Notes
 
-PS : It is easy to create some widgets with API Extern, especially with all the resources on Github, so we wanted to make it ourselves.
-We choosed to not use any template, or start from Bootstrap template!!! 
+## Some restrictions:
+- No use Bootstrap studio
+- No use of transform html to jsx
+- No "steal" any code from github repository
 *****************************************************************************************************************
 
 ## DOCUMENTATION: STEPS How to make it running?
