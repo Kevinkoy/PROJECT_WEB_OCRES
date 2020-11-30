@@ -24,7 +24,7 @@ export const deezer = () => (<Widget4/>);
 
 export const post_it = () => (<Widget5/>);
 
-export const widget6 = () => (<Widget6/>);
+export const weather = () => (<Widget6/>);
 
 export const clock = () => (<Widget7/>);
 

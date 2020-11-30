@@ -12,7 +12,8 @@ class Header extends React.Component {
     /// Methode Render
     render() {
         return (
-            <Navbar bg="light" expand="lg">
+            <Navbar bg="light" expand="lg" style={{
+              background: "white"}}>
             <Navbar.Brand href="/"> Home </Navbar.Brand>
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto">

@@ -1,7 +1,6 @@
 
 import React from 'react';
 import nouvelle_ville from './script.js';
-import './Widget6.css';
 
 class Widget6 extends React.Component{
   
@@ -10,7 +9,7 @@ class Widget6 extends React.Component{
           <div>
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width" />
-          <title>TP 3</title>
+          <title>Weather</title>
           <link href="style.css" rel="stylesheet" type="text/css" />
           {/* bootstrap */}
           <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossOrigin="anonymous" />
