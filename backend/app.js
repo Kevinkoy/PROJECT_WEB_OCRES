@@ -1,19 +1,10 @@
-var express = require("express");
-var path = require("path");
-var cookieParser = require("cookie-parser");
-var logger = require("morgan");
+const express = require('express');
+const app = express();
+const port = 5000;
 
-var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
+app.get('/', (req, res) => {res.send('Hello World!');})
+app.get('/newEndpoint', (req, res) => {res.send('new end point');})
 
-var app = express();
-
-app.use(logger("dev"));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-
-app.use("/", indexRouter);
-app.use("/users", usersRouter);
-
-module.exports = app;
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`);
+})
