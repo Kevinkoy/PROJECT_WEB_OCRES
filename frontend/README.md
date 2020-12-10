@@ -17,7 +17,7 @@ Storybook est là pour vous aider à prototyper et documenter vos composants. Si
 - App: Dashboard 
 - Theme: Student Dashboard
 - JSX / React / Bootstrap / CSS (+API)
-- 7 Widgets (Deezer, Weather, Sticky Notes, Notifications, Calendar, Graph, and LocalTime)
+- 8 Widgets (Deezer, Weather, Sticky Notes, Notifications, Calendar, Graph, and LocalTime)
 
 API Extern: Deezer, Weather
 API Intern: "LocalTime Clock", Notifications, Calendar, Graph, Sticky Notes
