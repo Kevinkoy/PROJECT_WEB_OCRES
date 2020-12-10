@@ -36,13 +36,6 @@ class Widget6 extends React.Component{
             </div>
           </div></div>
         );
+        }
 
-
-    }
-
-}
-
-
-export default Widget6;
-
-
+      }export default Widget6;
