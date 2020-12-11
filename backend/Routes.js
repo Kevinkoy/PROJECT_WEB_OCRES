@@ -8,13 +8,13 @@ const connection = mysql.createConnection({
   host: 'localhost', // Your connection adress (localhost).
   user: 'root',     // Your database's username.
   password: '',        // Your database's password.
-  database: 'test'   // Your database's name.
+  database: 'dashboard'   // Your database's name.
 });
 
 
 connection.connect();
 
-connection.query('SELECT * FROM `data` WHERE 1', function (err, rows, fields) {
+connection.query('SELECT * FROM `spending` WHERE 1', function (err, rows, fields) {
   if (err) throw err;
   console.log('The solution is: ', rows[0]);
 });
