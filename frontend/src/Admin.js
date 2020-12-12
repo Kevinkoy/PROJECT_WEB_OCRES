@@ -3,6 +3,13 @@ import Footer from './Components/Footer';
 import Header from './Components/Header';
 
 class Admin extends React.Component {
+/// Constructor
+
+/// bind(this)
+
+/// onChange
+
+/// onSubmit
 
   render() {
 
