@@ -31,7 +31,7 @@ router.route('/:id').get((req, res) => {
 
 router.route('/:id').delete((req, res) => {
   Stickynote.findByIdAndDelete(req.params.id)
-    .then(() => res.json('StickyNote deleted.'))
+    .then(() => res.json({message :'StickyNote deleted.'}))
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
