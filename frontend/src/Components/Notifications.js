@@ -16,7 +16,7 @@ class Notifications extends Component {
             /// MAP POUR STOCKER 
             Collection: []
         }
-        /// Binding
+
         /// Binding 
         this.componentDidMount = this.componentDidMount.bind(this)
         this.onChangeId = this.onChangeId.bind(this)
@@ -138,9 +138,10 @@ class Notifications extends Component {
                                 <div className="form-group">
                                     <label> Category </label>
                                     <select className="form-control" required
-                                    value={this.state.category}
-                                    onChange={this.onChangeCategory}>
+                                        value={this.state.category}
+                                        onChange={this.onChangeCategory}>
                                         <optgroup label="Categories">
+                                            <option value=""> Selectionnez une catégorie</option>
                                             <option value="Info">Info</option>
                                             <option value="Phrase">Phrase</option>
                                             <option value="Recette">Recette</option>
@@ -185,15 +186,17 @@ class Notifications extends Component {
                                 <div className="form-group">
                                     <label> Category </label>
                                     <select className="form-control" required
-                                    value={this.state.category}
-                                    onChange={this.onChangeCategory}>
+                                        value={this.state.category}
+                                        onChange={this.onChangeCategory}>
                                         <optgroup label="Categories">
+                                            <option value=""> Selectionnez une catégorie</option>
                                             <option value="Info">Info</option>
                                             <option value="Phrase">Phrase</option>
                                             <option value="Recette">Recette</option>
                                             <option value="Devoir">Devoir</option>
                                         </optgroup>
                                     </select>
+
                                 </div>
 
                                 <div className="form-group">
