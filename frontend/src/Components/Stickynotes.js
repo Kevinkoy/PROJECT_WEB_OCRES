@@ -10,22 +10,16 @@ class StickyNotes extends Component {
 
         /// this.state.attributs
         this.state = {
-            id:'',
+            id: '',
             title: '',
             notes: '',
             /// MAP POUR STOCKER 
-            Collection: [
-                {
-                    title: '',
-                    notes: ''
-                },
-
-            ]
+            Collection: []
         }
 
         /// Binding 
         this.componentDidMount = this.componentDidMount.bind(this)
-        this.onChangeId =this.onChangeId.bind(this)
+        this.onChangeId = this.onChangeId.bind(this)
         this.onChangeTitle = this.onChangeTitle.bind(this)
         this.onChangeNotes = this.onChangeNotes.bind(this)
         this.onSubmitAdd = this.onSubmitAdd.bind(this)
@@ -40,20 +34,8 @@ class StickyNotes extends Component {
         try {
             await axios.get("http://localhost:5000/StickyNotes")
                 .then(async reponse => {
-                    const data = await reponse.data;
-                    /*
-                      const data2 = [];
-  
-                      for (var i = 0; i < data.length; i++) {
-                          var post = {
-                              text: data[i].notes,
-                              title: data[i].title
-                          }
-                          data2.push(post)
-                      }
-                      */
                     this.setState({
-                        Collection: data
+                        Collection: reponse.data
                     })
                     console.log("Collection stickynote:", this.state.Collection)
                 })
@@ -67,7 +49,7 @@ class StickyNotes extends Component {
 
     /// Methodes onChange & onSave
     onChangeId(e) {
-        this.setState({ 
+        this.setState({
             id: e.target.value
         })
     }
@@ -99,42 +81,42 @@ class StickyNotes extends Component {
             .then(res => {
                 console.log(res.data)
             });
-         window.location = '/stickynotes';
+        window.location = '/stickynotes';
     }
 
-        /// Update
-        onSubmitUpdate(e) {
-            e.preventDefault();
-            const stickynote = {
-                title: this.state.title,
-                notes: this.state.notes,
-            }
-           
-            console.log(stickynote);
-            const url = 'http://localhost:5000/stickynotes/update/' + this.state.id;
-            axios.post(url, stickynote)
-                .then(res => {
-                    console.log(res.data)
-                });
-             window.location = '/stickynotes';
+    /// Update
+    onSubmitUpdate(e) {
+        e.preventDefault();
+        const stickynote = {
+            title: this.state.title,
+            notes: this.state.notes,
         }
 
-         /// Update
-         onSubmitDelete(e) {     
-            const stickynote = {
-                title: this.state.title,
-                notes: this.state.notes,
-            }
-            console.log(stickynote);
-            const url = 'http://localhost:5000/stickynotes/' + this.state.id;
-            axios.delete(url)
-                .then(res => {
-                    console.log(res.data)
-                });
-             window.location = '/stickynotes';
-        }
+        console.log(stickynote);
+        const url = 'http://localhost:5000/stickynotes/update/' + this.state.id;
+        axios.post(url, stickynote)
+            .then(res => {
+                console.log(res.data)
+            });
+        window.location = '/stickynotes';
+    }
 
-    /// SUPPRIMER
+    /// Update
+    onSubmitDelete(e) {
+        const stickynote = {
+            title: this.state.title,
+            notes: this.state.notes,
+        }
+        console.log(stickynote);
+        const url = 'http://localhost:5000/stickynotes/' + this.state.id;
+        axios.delete(url)
+            .then(res => {
+                console.log(res.data)
+            });
+        window.location = '/stickynotes';
+    }
+
+    /// onClick Delete
     clickElem(e) {
         console.log(e.target.id)
         const url = 'http://localhost:5000/StickyNotes/' + e.target.id;
@@ -146,10 +128,11 @@ class StickyNotes extends Component {
             })
     }
 
+
     /// METHODE RENDER !!!
     render() {
 
-
+        const { Collection } = this.state;
         return (
 
             <div>
@@ -209,7 +192,7 @@ class StickyNotes extends Component {
                                         className="form-control"
                                         value={this.state.id}
                                         onChange={this.onChangeId}
-                                        
+
                                     />
                                 </div>
 
@@ -254,7 +237,7 @@ class StickyNotes extends Component {
                                     />
                                 </div>
 
-                               
+
 
                                 <div className="form-group">
                                     <input type="submit" value="Delete StickyNotes" className="btn btn-danger btn-block" />
@@ -288,28 +271,21 @@ class StickyNotes extends Component {
                             <tbody>
                                 {/* BOUCLE FOR pour créer nombre de ligne en fonction du nb de row dans la collection */}
 
+                                {
+                                    Collection.length ?
+                                        Collection.map(Collection =>
 
-
-
-                                <tr>
-                                    <td className="text-center">{this.state.Collection[0]._id}</td>
-                                    <td className="text-center">{this.state.Collection[0].title}</td>
-                                    <td className="text-center">{this.state.Collection[0].notes}</td>
-                                    <td className="text-center">{this.state.Collection[0].createdAt}</td>
-                                    <td className="text-center">{this.state.Collection[0].updatedAt}</td>
-                                    <td className="text-center">{this.state.Collection[0].__v}</td>
-                                </tr>
-
-                                <tr>
-                                    <td className="text-center">{this.state.Collection[0]._id}</td>
-                                    <td className="text-center">{this.state.Collection[0].title}</td>
-                                    <td className="text-center">{this.state.Collection[0].notes}</td>
-                                    <td className="text-center">{this.state.Collection[0].createdAt}</td>
-                                    <td className="text-center">{this.state.Collection[0].updatedAt}</td>
-                                    <td className="text-center">{this.state.Collection[0].__v}</td>
-                                </tr>
-
-
+                                            <tr>
+                                                <td className="text-center">{Collection._id}</td>
+                                                <td className="text-center">{Collection.title}</td>
+                                                <td className="text-center">{Collection.notes}</td>
+                                                <td className="text-center">{Collection.createdAt}</td>
+                                                <td className="text-center">{Collection.updatedAt}</td>
+                                                <td className="text-center">{Collection.__v}</td>
+                                            </tr>
+                                        ) :
+                                        null
+                                }
                             </tbody>
                         </table>
                     </div>
