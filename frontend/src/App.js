@@ -116,7 +116,7 @@ class App extends React.Component {
                   </div>
                 </div>
 
-                <div className="col-sm-6 col-md-8 col-lg-4">
+                <div className="col-sm-max col-md-8 col-lg-4">
                   <div className="card clean-card text-center" style={{ background: "transparent", border: "transparent" }}>
                   <Widget5/>    {/* POST-IT */}
                

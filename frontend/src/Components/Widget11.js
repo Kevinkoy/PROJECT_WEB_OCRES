@@ -49,7 +49,7 @@ class Widget11 extends Component {
     var random = 0;
     do {
       random = Math.round(Math.random() * (this.state.Collection.length - 1) + 0);
-    } while (this.state.Collection[random].category != "Info");
+    } while (this.state.Collection[random].category !== "Info");
 
     NotificationManager.info(
       {
@@ -63,7 +63,7 @@ class Widget11 extends Component {
     var random = 0;
     do {
       random = Math.round(Math.random() * (this.state.Collection.length - 1) + 0);
-    } while (this.state.Collection[random].category != "Recette");
+    } while (this.state.Collection[random].category !== "Recette");
 
     NotificationManager.success(
       {
@@ -77,7 +77,7 @@ class Widget11 extends Component {
     var random = 0;
     do {
       random = Math.round(Math.random() * (this.state.Collection.length - 1) + 0);
-    } while (this.state.Collection[random].category != "Phrase");
+    } while (this.state.Collection[random].category !== "Phrase");
 
     NotificationManager.error(
       {
@@ -92,7 +92,7 @@ class Widget11 extends Component {
     var random = 0;
     do {
       random = Math.round(Math.random() * (this.state.Collection.length - 1) + 0);
-    } while (this.state.Collection[random].category != "Devoir");
+    } while (this.state.Collection[random].category !== "Devoir");
 
     NotificationManager.warning(
       {
