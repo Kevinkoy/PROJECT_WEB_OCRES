@@ -6,21 +6,26 @@
 - CANETIPUIG Pau
 - MALAN Jasmine
 
-## Description: 
+## Description of the Project
 - Project by ECE Students
 - App: Dashboard 
 - Theme: Student Dashboard
 - JSX / React / Bootstrap / CSS (+API)
 - 8 Widgets (Deezer, Weather, Sticky Notes, Notifications, Calendar, Graph, and LocalTime)
 
-API Extern: Deezer, Weather
-Personal API Intern: "LocalTime Clock", Notifications, Calendar, Graph, Sticky Notes
+Personal API Intern: Sticky Notes, Notifications, Spending (Graphs)
 
+## DataBase used: 
+- MongoDB
 
-## Some restrictions:
-- No use of Bootstrap studio
-- No use of transform html to jsx
-- No "steal" any code from github repository
+## Admin Page (BACKEND) Description:
+- There are 3 forms:
+- Spending, Notifications, StickyNotes
+1) You can Add
+2) You can Update
+3) You can Delete
+4) You can check all the collections
+
 *****************************************************************************************************************
 
 ## DOCUMENTATION: STEPS How to make it running? BACKEND
@@ -32,7 +37,11 @@ Personal API Intern: "LocalTime Clock", Notifications, Calendar, Graph, Sticky N
 5) Install nodemon:  `npm install `
 6) Install express cors moogose dotenv : `npm install express cors mongoose dotenv`
 7) Install nodemon:  `npm install -g nodemon `
-8) Start the server :  `nodemon server`
+8) IMPORTANT: Create a file ".env" : with  `ATLAS_URI = <uri> `
+For security access of the Cluster, we do not provide the link. 
+ 
+9) Start the server :  `nodemon server`
+
 10) Install axios : `npm install axios --save`
 
 NB: If any library missing, check at the terminal : module not found, just `npm install [name_of_module_not_found]` precised on the terminal.
