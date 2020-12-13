@@ -11,6 +11,7 @@ class Widget5 extends Component {
     /// this.state.attributs
     this.state = {
       id: '',
+      counter: 0,
 
       /// MAP POUR STOCKER 
       Collection: [
@@ -22,11 +23,22 @@ class Widget5 extends Component {
     }
     /// Binding 
     this.componentDidMount = this.componentDidMount.bind(this)
-    this.onClickNext = this.onClickNext.bind(this)
+    this.handleClick = this.handleClick.bind(this)
   }
 
 
   /// METHODES ***********************************************
+  /// Incrémenter +1 or reset
+  handleClick() {
+    if (this.state.counter> this.state.Collection.length-2) {
+    this.setState({counter: 0});
+    }
+    else {
+    this.setState({counter: this.state.counter+1});
+    }
+    }
+
+    
   /// ComponentDiDmount
   async componentDidMount() {
     try {
@@ -45,14 +57,6 @@ class Widget5 extends Component {
     }
   }
 
-  /// Next
-  onClickNext()
-  {
-
-  }
-
-
-
   /// METHODE RENDER
   render() {
     const { Collection } = this.state;
@@ -65,9 +69,10 @@ class Widget5 extends Component {
           height: '220px',
           position: 'relative',
           WebkitBoxShadow: '5px 5px 0px 0px #fff740, 10px 10px 0px 0px #feff9c, 15px 15px 0px 0px #7afcff, 20px 20px 0px 0px #CAE6FF, 25px 25px 0px 0px #E1EEFF, 23px 11px 27px 3px rgba(0,0,0,0)',
-          boxShadow: '5px 5px 0px 0px #fff740, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0px #7afcff, 20px 20px 0px 0px #ff65a3, 25px 25px 0px 0px #ff7eb9, 23px 11px 27px 3px rgba(0,0,0,0)',
-          onClick={onClickNext()}
-        }}>
+          boxShadow: '5px 5px 0px 0px #fff740, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0px #7afcff, 20px 20px 0px 0px #ff65a3, 25px 25px 0px 0px #ff7eb9, 23px 11px 27px 3px rgba(0,0,0,0)',         
+        }}
+        onClick={() => this.handleClick() }
+        >
 
         {/* TITLE CSS ************************************************************ */}
         <div className="title"
@@ -81,7 +86,7 @@ class Widget5 extends Component {
           }}>
 
           {/* TITLE CONTENT ************************************************************ */}
-          <h3 placeholder="titre" style={{ color: 'black' }}> {Collection[0].title} </h3>
+          <h3 placeholder="titre" style={{ color: 'black' }}> {Collection[this.state.counter].title} </h3>
         </div>
 
         {/* NOTES CSS ************************************************************ */}
@@ -94,9 +99,9 @@ class Widget5 extends Component {
 
           {/* NOTES CONTENT ************************************************************ */}
           <p placeholder="contenu">
-            {new Date(Collection[0].createdAt).toDateString()}
+            {new Date(Collection[this.state.counter].createdAt).toDateString()}
             <br/>
-            {Collection[0].notes}
+            {Collection[this.state.counter].notes}
 
           </p>
         </div>
