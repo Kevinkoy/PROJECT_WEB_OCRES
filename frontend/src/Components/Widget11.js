@@ -1,18 +1,17 @@
-import React from "react";
+import React, { Component } from 'react';
 import { Row } from "react-grid-system";
 import {NotificationContainer,NotificationManager} from "react-light-notifications";
 import "./Widget11_main.css/main.css";
   
-class Widget11 extends React.Component{
+class Widget11 extends Component{
+  /// Constructor
+  
 
   render(){
 
       return(
         <div >
-
-        
-          <Row>
-            
+          <Row>     
         <button
           style={{marginLeft:"30px", color:'#fff', textTransform:"uppercase", textDecoration:'none', backgroundColor:'rgb(105,105,105)', borderRadius:'5px', display:'inline-block', border:'none', transition: "all 0.4 ease 0s", padding:'32px 26px', position:"relative"}}
           onClick={() => {

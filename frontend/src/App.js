@@ -17,6 +17,7 @@ import Widget11 from './Components/Widget11';
 import Widget6 from './Components/Widget6';
 import Footer from './Components/Footer';
 
+
 /// Routes
 
 class App extends React.Component {
@@ -117,7 +118,8 @@ class App extends React.Component {
 
                 <div className="col-sm-6 col-md-8 col-lg-4">
                   <div className="card clean-card text-center" style={{ background: "transparent", border: "transparent" }}>
-                    <Widget5 /> {/* POST-IT */}
+                  <Widget5/>    {/* POST-IT */}
+               
                   </div>
                 </div>
 

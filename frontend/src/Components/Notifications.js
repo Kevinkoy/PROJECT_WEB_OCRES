@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Header from './Header';
 
-class StickyNotes extends Component {
+class Notifications extends Component {
 
     /// CONSTRUCTEUR
     constructor(props) {
@@ -11,33 +11,31 @@ class StickyNotes extends Component {
         /// this.state.attributs
         this.state = {
             id: '',
-            title: '',
-            notes: '',
+            category: '',
+            content: '',
             /// MAP POUR STOCKER 
             Collection: []
         }
-
+        /// Binding
         /// Binding 
         this.componentDidMount = this.componentDidMount.bind(this)
         this.onChangeId = this.onChangeId.bind(this)
-        this.onChangeTitle = this.onChangeTitle.bind(this)
-        this.onChangeNotes = this.onChangeNotes.bind(this)
+        this.onChangeCategory = this.onChangeCategory.bind(this)
+        this.onChangeContent = this.onChangeContent.bind(this)
         this.onSubmitAdd = this.onSubmitAdd.bind(this)
         this.onSubmitUpdate = this.onSubmitUpdate.bind(this)
         this.onSubmitDelete = this.onSubmitDelete.bind(this)
-
     }
 
-    /// Methode componentDidMount
-
+    /// Methodes - componentDidMount
     async componentDidMount() {
         try {
-            await axios.get("http://localhost:5000/StickyNotes")
+            await axios.get("http://localhost:5000/Notifications")
                 .then(async reponse => {
                     this.setState({
                         Collection: reponse.data
                     })
-                    console.log("Collection stickynote:", this.state.Collection)
+                    console.log("Collection <Notifications>:", this.state.Collection)
                 })
                 .catch(err => {
                     console.log(err)
@@ -46,7 +44,6 @@ class StickyNotes extends Component {
             console.log(err);
         }
     }
-
     /// Methodes onChange & onSave
     onChangeId(e) {
         this.setState({
@@ -54,81 +51,67 @@ class StickyNotes extends Component {
         })
     }
 
-    onChangeTitle(e) {
-        this.setState({ // Update the notes state
-            title: e.target.value
+    onChangeCategory(e) {
+        this.setState({
+            category: e.target.value
         })
     }
-    onChangeNotes(e) {
-        this.setState({ // Update the notes state
-            notes: e.target.value
+    onChangeContent(e) {
+        this.setState({
+            content: e.target.value
         })
     }
-
-
 
     /// ADD
     onSubmitAdd(e) {
         e.preventDefault();
-        const stickynote = {
-            title: this.state.title,
-            notes: this.state.notes,
+        const notification = {
+            category: this.state.category,
+            content: this.state.content,
         }
 
-        console.log(stickynote);
-        const url = 'http://localhost:5000/stickynotes/add';
-        axios.post(url, stickynote)
+        console.log(notification);
+        const url = 'http://localhost:5000/notifications/add';
+        axios.post(url, notification)
             .then(res => {
                 console.log(res.data)
             });
-        window.location = '/stickynotes';
+        window.location = '/notifications';
     }
 
     /// Update
     onSubmitUpdate(e) {
         e.preventDefault();
-        const stickynote = {
-            title: this.state.title,
-            notes: this.state.notes,
+        const notification = {
+            category: this.state.category,
+            content: this.state.content,
         }
 
-        console.log(stickynote);
-        const url = 'http://localhost:5000/stickynotes/update/' + this.state.id;
-        axios.post(url, stickynote)
+        console.log(notification);
+        const url = 'http://localhost:5000/notifications/update/' + this.state.id;
+        axios.post(url, notification)
             .then(res => {
                 console.log(res.data)
             });
-        window.location = '/stickynotes';
+        window.location = '/notifications';
     }
 
     /// Update
     onSubmitDelete(e) {
-        const stickynote = {
-            title: this.state.title,
-            notes: this.state.notes,
+        const notification = {
+            category: this.state.category,
+            content: this.state.content,
         }
-        console.log(stickynote);
-        const url = 'http://localhost:5000/stickynotes/' + this.state.id;
+        console.log(notification);
+        const url = 'http://localhost:5000/notifications/' + this.state.id;
         axios.delete(url)
             .then(res => {
                 console.log(res.data)
             });
-        window.location = '/stickynotes';
+        window.location = '/notifications';
     }
 
-    /// onClick Delete
-    clickElem(e) {
-        console.log(e.target.id)
-        const url = 'http://localhost:5000/StickyNotes/' + e.target.id;
-        axios.delete(url)
-            .then(res => {
-                console.log(res.data.message);
-            }).catch(err => {
-                console.log(err)
-            })
-    }
-
-
+    /// ***************************************************************
     /// METHODE RENDER !!!
     render() {
 
@@ -153,27 +136,31 @@ class StickyNotes extends Component {
 
                             <form onSubmit={this.onSubmitAdd}>
                                 <div className="form-group">
-                                    <label> Title </label>
+                                    <label> Category </label>
+                                    <select className="form-control" required
+                                    value={this.state.category}
+                                    onChange={this.onChangeCategory}>
+                                        <optgroup label="Categories">
+                                            <option value="Info">Info</option>
+                                            <option value="Phrase">Phrase</option>
+                                            <option value="Recette">Recette</option>
+                                            <option value="Devoir">Devoir</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+
+                                <div className="form-group">
+                                    <label> Content </label>
                                     <input type="text"
                                         required
                                         className="form-control"
-                                        value={this.state.title}
-                                        onChange={this.onChangeTitle}
+                                        value={this.state.content}
+                                        onChange={this.onChangeContent}
                                     />
                                 </div>
 
                                 <div className="form-group">
-                                    <label> Notes </label>
-                                    <input type="text"
-                                        required
-                                        className="form-control"
-                                        value={this.state.notes}
-                                        onChange={this.onChangeNotes}
-                                    />
-                                </div>
-
-                                <div className="form-group">
-                                    <input type="submit" value="Create StickyNotes" className="btn btn-success btn-block" />
+                                    <input type="submit" value="Create Notifications" className="btn btn-success btn-block" />
                                 </div>
                             </form>
                         </div>
@@ -195,29 +182,32 @@ class StickyNotes extends Component {
 
                                     />
                                 </div>
+                                <div className="form-group">
+                                    <label> Category </label>
+                                    <select className="form-control" required
+                                    value={this.state.category}
+                                    onChange={this.onChangeCategory}>
+                                        <optgroup label="Categories">
+                                            <option value="Info">Info</option>
+                                            <option value="Phrase">Phrase</option>
+                                            <option value="Recette">Recette</option>
+                                            <option value="Devoir">Devoir</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
 
                                 <div className="form-group">
-                                    <label> Title </label>
+                                    <label> Content </label>
                                     <input type="text"
                                         required
                                         className="form-control"
-                                        value={this.state.title}
-                                        onChange={this.onChangeTitle}
+                                        value={this.state.content}
+                                        onChange={this.onChangeContent}
                                     />
                                 </div>
 
                                 <div className="form-group">
-                                    <label> Notes </label>
-                                    <input type="text"
-                                        required
-                                        className="form-control"
-                                        value={this.state.notes}
-                                        onChange={this.onChangeNotes}
-                                    />
-                                </div>
-
-                                <div className="form-group">
-                                    <input type="submit" value="Update StickyNotes" className="btn btn-warning btn-block" />
+                                    <input type="submit" value="Update Notifications" className="btn btn-warning btn-block" />
                                 </div>
                             </form>
                         </div>
@@ -240,7 +230,7 @@ class StickyNotes extends Component {
 
 
                                 <div className="form-group">
-                                    <input type="submit" value="Delete StickyNotes" className="btn btn-danger btn-block" />
+                                    <input type="submit" value="Delete Notifications" className="btn btn-danger btn-block" />
                                 </div>
                             </form>
                         </div>
@@ -261,8 +251,8 @@ class StickyNotes extends Component {
                                 <thead>
                                     <tr className="text-center">
                                         <th>_id</th>
-                                        <th>title</th>
-                                        <th>notes</th>
+                                        <th>category</th>
+                                        <th>content</th>
                                         <th>createdAt</th>
                                         <th>updateAt</th>
                                         <th>__v</th>
@@ -277,8 +267,8 @@ class StickyNotes extends Component {
 
                                                 <tr>
                                                     <td className="text-center">{Collection._id}</td>
-                                                    <td className="text-center">{Collection.title}</td>
-                                                    <td className="text-center">{Collection.notes}</td>
+                                                    <td className="text-center">{Collection.category}</td>
+                                                    <td className="text-center">{Collection.content}</td>
                                                     <td className="text-center">{new Date(Collection.createdAt).toDateString()}</td>
                                                     <td className="text-center">{new Date(Collection.updatedAt).toLocaleString()}</td>
                                                     <td className="text-center">{Collection.__v}</td>
@@ -297,6 +287,9 @@ class StickyNotes extends Component {
 
         )
     }
-};
 
-export default StickyNotes;
+
+
+}
+
+export default Notifications;
