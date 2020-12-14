@@ -12,7 +12,7 @@ class Widget9 extends Component {
     this.state = {
       options: {
         series: [23, 11, 54, 72, 12],
-        labels: ["Bars", "Restaurant", "Shopping", "Transport", "Games"]
+        labels: ["Bars", "Restaurants", "Shopping", "Transports", "Games"]
       },
 
       /// TOTAL 
