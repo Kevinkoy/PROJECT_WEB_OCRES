@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Header from './Header';
+import DatePicker from 'react-datepicker';
+import "react-datepicker/dist/react-datepicker.css";
 
-class StickyNotes extends Component {
+class Spendings extends Component {
 
+    /// CONSTRUCTEUR
     /// CONSTRUCTEUR
     constructor(props) {
         super(props);
@@ -11,17 +14,20 @@ class StickyNotes extends Component {
         /// this.state.attributs
         this.state = {
             id: '',
-            title: '',
-            notes: '',
+            category: '',
+            date: new Date(),
+            spending: 0,
+
             /// MAP POUR STOCKER 
-            Collection: []
+            Collection: [{}]
         }
 
         /// Binding 
         this.componentDidMount = this.componentDidMount.bind(this)
         this.onChangeId = this.onChangeId.bind(this)
-        this.onChangeTitle = this.onChangeTitle.bind(this)
-        this.onChangeNotes = this.onChangeNotes.bind(this)
+        this.onChangeCategory = this.onChangeCategory.bind(this)
+        this.onChangeDate = this.onChangeDate.bind(this)
+        this.onChangeSpending = this.onChangeSpending.bind(this)
         this.onSubmitAdd = this.onSubmitAdd.bind(this)
         this.onSubmitUpdate = this.onSubmitUpdate.bind(this)
         this.onSubmitDelete = this.onSubmitDelete.bind(this)
@@ -29,15 +35,14 @@ class StickyNotes extends Component {
     }
 
     /// Methode componentDidMount
-
     async componentDidMount() {
         try {
-            await axios.get("http://localhost:5000/StickyNotes")
+            await axios.get("http://localhost:5000/Spendings")
                 .then(async reponse => {
                     this.setState({
                         Collection: reponse.data
                     })
-                    console.log("Collection stickynote:", this.state.Collection)
+                    console.log("Collection spendings:", this.state.Collection)
                 })
                 .catch(err => {
                     console.log(err)
@@ -47,89 +52,86 @@ class StickyNotes extends Component {
         }
     }
 
-    /// Methodes onChange & onSave
+    /// Methodes onChange
     onChangeId(e) {
         this.setState({
             id: e.target.value
         })
     }
 
-    onChangeTitle(e) {
-        this.setState({ // Update the notes state
-            title: e.target.value
-        })
-    }
-    onChangeNotes(e) {
-        this.setState({ // Update the notes state
-            notes: e.target.value
+    onChangeCategory(e) {
+        this.setState({
+            category: e.target.value
         })
     }
 
+    onChangeDate(date) {
+        this.setState({
+            date: date
+        })
+    }
 
+    onChangeSpending(e) {
+        this.setState({
+            spending: e.target.value
+        })
+    }
 
+    /// Methodes ADD / UPDATE / DELETE
     /// ADD
     onSubmitAdd(e) {
         e.preventDefault();
-        const stickynote = {
-            title: this.state.title,
-            notes: this.state.notes,
+        const spending = {
+            category: this.state.category,
+            date: this.state.date,
+            spending: this.state.spending,
         }
 
-        console.log(stickynote);
-        const url = 'http://localhost:5000/stickynotes/add';
-        axios.post(url, stickynote)
+        console.log(spending);
+        const url = 'http://localhost:5000/spendings/add';
+        axios.post(url, spending)
             .then(res => {
                 console.log(res.data)
             });
-        window.location = '/stickynotes';
+        window.location = '/spendings';
     }
 
     /// Update
     onSubmitUpdate(e) {
         e.preventDefault();
-        const stickynote = {
-            title: this.state.title,
-            notes: this.state.notes,
+        const spending = {
+            category: this.state.category,
+            date: this.state.date,
+            depense: this.state.spending,
         }
 
-        console.log(stickynote);
-        const url = 'http://localhost:5000/stickynotes/update/' + this.state.id;
-        axios.post(url, stickynote)
+        console.log(spending);
+        const url = 'http://localhost:5000/spendings/update/' + this.state.id;
+        axios.post(url, spending)
             .then(res => {
                 console.log(res.data)
             });
-        window.location = '/stickynotes';
+        window.location = '/spendings';
     }
 
     /// Delete
     onSubmitDelete(e) {
-        const stickynote = {
-            title: this.state.title,
-            notes: this.state.notes,
+        e.preventDefault();
+        const spending = {
+            category: this.state.category,
+            date: this.state.date,
+            depense: this.state.spending,
         }
-        console.log(stickynote);
-        const url = 'http://localhost:5000/stickynotes/' + this.state.id;
+        console.log(spending);
+        const url = 'http://localhost:5000/spendings/' + this.state.id;
         axios.delete(url)
             .then(res => {
                 console.log(res.data)
             });
-        window.location = '/stickynotes';
+        window.location = '/spendings';
     }
 
-    /// onClick Delete
-    clickElem(e) {
-        console.log(e.target.id)
-        const url = 'http://localhost:5000/StickyNotes/' + e.target.id;
-        axios.delete(url)
-            .then(res => {
-                console.log(res.data.message);
-            }).catch(err => {
-                console.log(err)
-            })
-    }
-
-
-    /// METHODE RENDER !!!
+    /// METHODE RENDER !!! *****************************************************************
     render() {
 
         const { Collection } = this.state;
@@ -149,31 +151,45 @@ class StickyNotes extends Component {
                     <div className="row">
                         {/***** AJOUTER *****/}
                         <div className="col-sm-max col-md-6 col-lg-4">
-                            <h3> Create </h3>
+                            <h3> #Create </h3>
 
                             <form onSubmit={this.onSubmitAdd}>
                                 <div className="form-group">
-                                    <label> Title </label>
-                                    <input type="text"
-                                        required
-                                        className="form-control"
-                                        value={this.state.title}
-                                        onChange={this.onChangeTitle}
+                                    <label> Category </label>
+                                    <select className="form-control" required
+                                        value={this.state.category}
+                                        onChange={this.onChangeCategory}>
+                                        <optgroup label="Categories">
+                                            <option value=""> Selectionnez une catégorie</option>
+                                            <option value="Bars"> Bars </option>
+                                            <option value="Restaurant"> Restaurant</option>
+                                            <option value="Shopping"> Shopping </option>
+                                            <option value="Transport">Transport</option>
+                                            <option value="Games">Games</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+
+                                <div className="form-group">
+                                    <label>Date: </label>
+                                    <div>
+                                        <DatePicker
+                                            selected={this.state.date}
+                                            onChange={this.onChangeDate}
+                                        />
+                                    </div>
+                                </div>
+
+                                <div className="form-group">
+                                    <label htmlFor="email">Spending</label>
+                                    <input className="form-control" type="number" placeholder={0} min={0} step="0.01" required
+                                        value={this.state.spending}
+                                        onChange={this.onChangeSpending}
                                     />
                                 </div>
 
                                 <div className="form-group">
-                                    <label> Notes </label>
-                                    <input type="text"
-                                        required
-                                        className="form-control"
-                                        value={this.state.notes}
-                                        onChange={this.onChangeNotes}
-                                    />
-                                </div>
-
-                                <div className="form-group">
-                                    <input type="submit" value="Create StickyNotes" className="btn btn-success btn-block" />
+                                    <input type="submit" value="Create Spendings" className="btn btn-success btn-block" />
                                 </div>
                             </form>
                         </div>
@@ -261,8 +277,9 @@ class StickyNotes extends Component {
                                 <thead>
                                     <tr className="text-center">
                                         <th>_id</th>
-                                        <th>title</th>
-                                        <th>notes</th>
+                                        <th>category</th>
+                                        <th>date</th>
+                                        <th>spending</th>
                                         <th>createdAt</th>
                                         <th>updateAt</th>
                                         <th>__v</th>
@@ -277,8 +294,9 @@ class StickyNotes extends Component {
 
                                                 <tr>
                                                     <td className="text-center">{Collection._id}</td>
-                                                    <td className="text-center">{Collection.title}</td>
-                                                    <td className="text-center">{Collection.notes}</td>
+                                                    <td className="text-center">{Collection.category}</td>
+                                                    <td className="text-center">{Collection.date}</td>
+                                                    <td className="text-center">{Collection.spending}</td>
                                                     <td className="text-center">{new Date(Collection.createdAt).toDateString()}</td>
                                                     <td className="text-center">{new Date(Collection.updatedAt).toLocaleString()}</td>
                                                     <td className="text-center">{Collection.__v}</td>
@@ -297,6 +315,9 @@ class StickyNotes extends Component {
 
         )
     }
-};
 
-export default StickyNotes;
+
+
+}
+
+export default Spendings;

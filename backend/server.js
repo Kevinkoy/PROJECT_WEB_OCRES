@@ -22,11 +22,13 @@ const exercisesRouter = require('./routes/exercises');
 const usersRouter = require('./routes/users');
 const stickynotesRouter = require('./routes/stickynotes'); ///
 const notificationsRouter = require('./routes/notifications');
+const spendingsRouter = require('./routes/spendings');
 
 app.use('/exercises', exercisesRouter);
 app.use('/users', usersRouter);
 app.use('/stickynotes', stickynotesRouter); ///
 app.use('/notifications', notificationsRouter);
+app.use('/spendings', spendingsRouter);
 
 
 app.listen(port, () => {

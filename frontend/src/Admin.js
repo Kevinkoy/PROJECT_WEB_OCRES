@@ -48,7 +48,7 @@ class Admin extends React.Component {
                   <form>
                     <div className="form-group">
                     <h1 className="text-center">Spending</h1>
-                    </div><a className="btn btn-success btn-block" role="button" href="/spending">Manage</a>  
+                    </div><a className="btn btn-success btn-block" role="button" href="/spendings">Manage</a>  
                   </form>
                 </div>
                 {/* FORM 2*/}
