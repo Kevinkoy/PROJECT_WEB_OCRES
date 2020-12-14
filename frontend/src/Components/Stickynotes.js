@@ -279,7 +279,7 @@ class StickyNotes extends Component {
                                                     <td className="text-center">{Collection._id}</td>
                                                     <td className="text-center">{Collection.title}</td>
                                                     <td className="text-center">{Collection.notes}</td>
-                                                    <td className="text-center">{new Date(Collection.createdAt).toDateString()}</td>
+                                                    <td className="text-center">{new Date(Collection.createdAt).toDateString().geY}</td>
                                                     <td className="text-center">{new Date(Collection.updatedAt).toLocaleString()}</td>
                                                     <td className="text-center">{Collection.__v}</td>
                                                 </tr>

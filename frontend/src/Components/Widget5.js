@@ -68,6 +68,7 @@ class Widget5 extends Component {
           width: '230px',
           height: '220px',
           position: 'relative',
+          marginLeft: '70px',
           WebkitBoxShadow: '5px 5px 0px 0px #fff740, 10px 10px 0px 0px #feff9c, 15px 15px 0px 0px #7afcff, 20px 20px 0px 0px #CAE6FF, 25px 25px 0px 0px #E1EEFF, 23px 11px 27px 3px rgba(0,0,0,0)',
           boxShadow: '5px 5px 0px 0px #fff740, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0px #7afcff, 20px 20px 0px 0px #ff65a3, 25px 25px 0px 0px #ff7eb9, 23px 11px 27px 3px rgba(0,0,0,0)',         
         }}
