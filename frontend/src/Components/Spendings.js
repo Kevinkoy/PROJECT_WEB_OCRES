@@ -102,7 +102,7 @@ class Spendings extends Component {
         const spending = {
             category: this.state.category,
             date: this.state.date,
-            depense: this.state.spending,
+            spending: this.state.spending,
         }
 
         console.log(spending);
@@ -213,22 +213,36 @@ class Spendings extends Component {
                                 </div>
 
                                 <div className="form-group">
-                                    <label> Title </label>
-                                    <input type="text"
-                                        required
-                                        className="form-control"
-                                        value={this.state.title}
-                                        onChange={this.onChangeTitle}
-                                    />
+                                    <label> Category </label>
+                                    <select className="form-control" required
+                                        value={this.state.category}
+                                        onChange={this.onChangeCategory}>
+                                        <optgroup label="Categories">
+                                            <option value=""> Selectionnez une catégorie</option>
+                                            <option value="Bars"> Bars </option>
+                                            <option value="Restaurant"> Restaurant</option>
+                                            <option value="Shopping"> Shopping </option>
+                                            <option value="Transport">Transport</option>
+                                            <option value="Games">Games</option>
+                                        </optgroup>
+                                    </select>
                                 </div>
 
                                 <div className="form-group">
-                                    <label> Notes </label>
-                                    <input type="text"
-                                        required
-                                        className="form-control"
-                                        value={this.state.notes}
-                                        onChange={this.onChangeNotes}
+                                    <label>Date: </label>
+                                    <div>
+                                        <DatePicker
+                                            selected={this.state.date}
+                                            onChange={this.onChangeDate}
+                                        />
+                                    </div>
+                                </div>
+
+                                <div className="form-group">
+                                    <label htmlFor="email">Spending</label>
+                                    <input className="form-control" type="number" placeholder={0} min={0} step="0.01" required
+                                        value={this.state.spending}
+                                        onChange={this.onChangeSpending}
                                     />
                                 </div>
 
