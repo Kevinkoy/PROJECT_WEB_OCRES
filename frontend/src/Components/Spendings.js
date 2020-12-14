@@ -247,7 +247,7 @@ class Spendings extends Component {
                                 </div>
 
                                 <div className="form-group">
-                                    <input type="submit" value="Update StickyNotes" className="btn btn-warning btn-block" />
+                                    <input type="submit" value="Update Spendings" className="btn btn-warning btn-block" />
                                 </div>
                             </form>
                         </div>
@@ -270,7 +270,7 @@ class Spendings extends Component {
 
 
                                 <div className="form-group">
-                                    <input type="submit" value="Delete StickyNotes" className="btn btn-danger btn-block" />
+                                    <input type="submit" value="Delete Spendings" className="btn btn-danger btn-block" />
                                 </div>
                             </form>
                         </div>
