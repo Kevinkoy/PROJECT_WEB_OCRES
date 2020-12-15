@@ -197,7 +197,7 @@ class Spendings extends Component {
 
                         {/***** UPDATE *****/}
                         <div className="col-sm-max col-md-6 col-lg-4">
-                            <h3> Update (by _id) </h3>
+                            <h3> #Update (by _id) </h3>
 
                             <form onSubmit={this.onSubmitUpdate}>
 
@@ -254,7 +254,7 @@ class Spendings extends Component {
 
                         {/***** DELETE by ID *****/}
                         <div className="col-sm-max col-md-6 col-lg-4">
-                            <h3>Delete (by _id) </h3>
+                            <h3>#Delete (by _id) </h3>
 
                             <form onSubmit={this.onSubmitDelete}>
                                 <div className="form-group">
