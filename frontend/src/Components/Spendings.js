@@ -31,6 +31,7 @@ class Spendings extends Component {
         this.onSubmitAdd = this.onSubmitAdd.bind(this)
         this.onSubmitUpdate = this.onSubmitUpdate.bind(this)
         this.onSubmitDelete = this.onSubmitDelete.bind(this)
+        this.onClickElem = this.onClickElem.bind(this)
 
     }
 
@@ -130,6 +131,32 @@ class Spendings extends Component {
             });
         window.location = '/spendings';
     }
+
+    // clickElem
+        onClickElem(e) {
+            console.log(e.target.id)
+            const url = 'http://localhost:5000/spendings/' + e.target.id;
+            try {  
+                axios.get(url)
+                    .then(async reponse => {
+                        this.setState({
+                            id: reponse.data._id,
+                            category: reponse.data.category,
+                            date: reponse.data.date,
+                            spending: reponse.data.spending
+                        })
+                    })
+                    .catch(err => {
+                        console.log(err)
+                    })
+            } catch (err) {
+                console.log(err);
+            }
+        }
+
+      
+    
+
 
     /// METHODE RENDER !!! *****************************************************************
     render() {
@@ -308,13 +335,13 @@ class Spendings extends Component {
                                         Collection.length ?
                                             Collection.map(Collection =>
 
-                                                <tr>
+                                                <tr >
                                                     <td className="text-center">{Collection._id}</td>
                                                     <td className="text-center">{Collection.category}</td>
                                                     <td className="text-center">{new Date(Collection.date).toDateString()}</td>
                                                     <td className="text-center">{Collection.spending}</td>
                                                     {/* 
-                                                    <td className="text-center">{new Date(Collection.createdAt).toDateString()}</td>
+                                                    <td className="text-center">{new Date(Collection.createdAt).toDateString()}</td> 
                                                     <td className="text-center">{new Date(Collection.updatedAt).toLocaleString()}</td>
                                                     <td className="text-center">{Collection.__v}</td>
                                                     */}
