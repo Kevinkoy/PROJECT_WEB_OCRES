@@ -15,7 +15,7 @@ class Widget9 extends Component {
         labels: ["Bars", "Restaurants", "Shopping", "Transports", "Games"]
       },
 
-      /// TOTAL 
+      /// TOTAL by Category
       sumBars: 0,
       sumRestaurant: 0,
       sumShopping: 0,
@@ -136,7 +136,6 @@ class Widget9 extends Component {
 
         <Chart
           options={this.state.options}
-          series={this.state.series}
           series={[
             this.state.sumBars, 
             this.state.sumRestaurant, 

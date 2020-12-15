@@ -294,9 +294,11 @@ class Spendings extends Component {
                                         <th>category</th>
                                         <th>date</th>
                                         <th>spending</th>
+                                        {/* 
                                         <th>createdAt</th>
                                         <th>updateAt</th>
                                         <th>__v</th>
+                                        */}
                                     </tr>
                                 </thead>
 
@@ -309,11 +311,13 @@ class Spendings extends Component {
                                                 <tr>
                                                     <td className="text-center">{Collection._id}</td>
                                                     <td className="text-center">{Collection.category}</td>
-                                                    <td className="text-center">{Collection.date}</td>
+                                                    <td className="text-center">{new Date(Collection.date).getDay()}</td>
                                                     <td className="text-center">{Collection.spending}</td>
+                                                    {/* 
                                                     <td className="text-center">{new Date(Collection.createdAt).toDateString()}</td>
                                                     <td className="text-center">{new Date(Collection.updatedAt).toLocaleString()}</td>
                                                     <td className="text-center">{Collection.__v}</td>
+                                                    */}
                                                 </tr>
                                             ) :
                                             null
