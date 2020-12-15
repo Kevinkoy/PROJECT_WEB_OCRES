@@ -311,7 +311,7 @@ class Spendings extends Component {
                                                 <tr>
                                                     <td className="text-center">{Collection._id}</td>
                                                     <td className="text-center">{Collection.category}</td>
-                                                    <td className="text-center">{new Date(Collection.date).getDay()}</td>
+                                                    <td className="text-center">{new Date(Collection.date).toDateString()}</td>
                                                     <td className="text-center">{Collection.spending}</td>
                                                     {/* 
                                                     <td className="text-center">{new Date(Collection.createdAt).toDateString()}</td>
