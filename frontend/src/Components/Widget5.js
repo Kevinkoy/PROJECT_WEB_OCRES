@@ -103,7 +103,7 @@ class Widget5 extends Component {
             {new Date(Collection[this.state.counter].createdAt).toDateString()}
             <br/>
             {Collection[this.state.counter].notes}
-
+          
           </p>
         </div>
 

@@ -103,7 +103,7 @@ class Widget11 extends Component {
 
   /// RENDER ******************************************************************************************
   render() {
-    const { Collection } = this.state;
+    //const { Collection } = this.state;
     return (
       <div >
         <Row>

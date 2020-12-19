@@ -60,7 +60,7 @@ class App extends React.Component {
 
                 <div className="col-sm-max col-md-8 col-lg-4">
                   <div className="card clean-card text-center" style={{ background: "transparent", border: "transparent" }}>
-                    <Widget1 /> {/* CALENDAR */}
+                  <Widget1/> {/* CALENDAR */}
                   </div>
                 </div>
 

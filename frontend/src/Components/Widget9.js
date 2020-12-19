@@ -71,7 +71,7 @@ class Widget9 extends Component {
   async displayBars() {
 
     for (var i = 0; i < this.state.Collection.length; i++) {
-      if (this.state.Collection[i].category == "Bars") {
+      if (this.state.Collection[i].category === "Bars") {
         await this.setState({
           sumBars: this.state.sumBars + this.state.Collection[i].spending
         })
@@ -83,7 +83,7 @@ class Widget9 extends Component {
   async displayRestaurant() {
 
     for (var i = 0; i < this.state.Collection.length; i++) {
-      if (this.state.Collection[i].category == "Restaurant") {
+      if (this.state.Collection[i].category === "Restaurant") {
         await this.setState({
           sumRestaurant: this.state.sumRestaurant + this.state.Collection[i].spending
         })
@@ -95,7 +95,7 @@ class Widget9 extends Component {
   async displayShopping() {
 
     for (var i = 0; i < this.state.Collection.length; i++) {
-      if (this.state.Collection[i].category == "Shopping") {
+      if (this.state.Collection[i].category === "Shopping") {
         await this.setState({
           sumShopping: this.state.sumShopping + this.state.Collection[i].spending
         })
@@ -107,7 +107,7 @@ class Widget9 extends Component {
   async displayTransport() {
 
     for (var i = 0; i < this.state.Collection.length; i++) {
-      if (this.state.Collection[i].category == "Transport") {
+      if (this.state.Collection[i].category === "Transport") {
         await this.setState({
           sumTransport: this.state.sumTransport + this.state.Collection[i].spending
         })
@@ -119,7 +119,7 @@ class Widget9 extends Component {
   async displayGames() {
 
     for (var i = 0; i < this.state.Collection.length; i++) {
-      if (this.state.Collection[i].category == "Games") {
+      if (this.state.Collection[i].category === "Games") {
         await this.setState({
           sumGames: this.state.sumGames + this.state.Collection[i].spending
         })
