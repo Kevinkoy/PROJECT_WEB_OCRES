@@ -117,7 +117,7 @@ class Widget2 extends React.Component {
 
         for (var i = 0; i < this.state.Collection.length; i++) {
             //console.log(new Date(this.state.Collection[i].date).getDay());
-            if (new Date(this.state.Collection[i].date).getDay() === "1") {
+            if (new Date(this.state.Collection[i].date).getDay() === 1) {
 
                 await this.setState({
                     sumMonday: this.state.sumMonday + this.state.Collection[i].spending
@@ -133,7 +133,7 @@ class Widget2 extends React.Component {
     async displayTuesday() {
 
         for (var i = 0; i < this.state.Collection.length; i++) {
-            if (new Date(this.state.Collection[i].date).getDay() === "2") {
+            if (new Date(this.state.Collection[i].date).getDay() === 2) {
                 await this.setState({
                     sumTuesday: this.state.sumTuesday + this.state.Collection[i].spending
                 })
@@ -145,7 +145,7 @@ class Widget2 extends React.Component {
     async displayWednesday() {
 
         for (var i = 0; i < this.state.Collection.length; i++) {
-            if (new Date(this.state.Collection[i].date).getDay() === "3") {
+            if (new Date(this.state.Collection[i].date).getDay() === 3) {
                 await this.setState({
                     sumWednesday: this.state.sumWednesday + this.state.Collection[i].spending
                 })
@@ -157,7 +157,7 @@ class Widget2 extends React.Component {
     async displayThursday() {
 
         for (var i = 0; i < this.state.Collection.length; i++) {
-            if (new Date(this.state.Collection[i].date).getDay() === "4") {
+            if (new Date(this.state.Collection[i].date).getDay() === 4) {
                 await this.setState({
                     sumThursday: this.state.sumThursday + this.state.Collection[i].spending
                 })
@@ -169,7 +169,7 @@ class Widget2 extends React.Component {
     async displayFriday() {
 
         for (var i = 0; i < this.state.Collection.length; i++) {
-            if (new Date(this.state.Collection[i].date).getDay() === "5") {
+            if (new Date(this.state.Collection[i].date).getDay() === 5) {
                 await this.setState({
                     sumFriday: this.state.sumFriday + this.state.Collection[i].spending
                 })
@@ -181,7 +181,7 @@ class Widget2 extends React.Component {
     async displaySaturday() {
 
         for (var i = 0; i < this.state.Collection.length; i++) {
-            if (new Date(this.state.Collection[i].date).getDay() === "6") {
+            if (new Date(this.state.Collection[i].date).getDay() === 6) {
                 await this.setState({
                     sumSaturday: this.state.sumSaturday + this.state.Collection[i].spending
                 })
@@ -193,7 +193,7 @@ class Widget2 extends React.Component {
     async displaySunday() {
 
         for (var i = 0; i < this.state.Collection.length; i++) {
-            if (new Date(this.state.Collection[i].date).getDay() === "0") {
+            if (new Date(this.state.Collection[i].date).getDay() === 0) {
                 await this.setState({
                     sumSunday: this.state.sumSunday + this.state.Collection[i].spending
                 })
